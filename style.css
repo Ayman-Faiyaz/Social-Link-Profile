@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&display=swap');
+
+:root {
+  --main-color: #cb0101;
+  --text-color: #030303;
+  --bg-color: #f0f0f0;
+}
+
+.dark-theme {
+  --main-color: #cb0101;
+  --text-color: #f0f0f0;
+  --bg-color: #030303;
+}
+
+body {
+  font-family: "Annie Use Your Telescope", cursive;
+  font-weight: 400;
+  font-style: normal;
+  background-color: var(--bg-color);
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+#pfp {
+    border: var(--main-color);
+    border-radius: 20em;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+}
+
+#name {
+    font-size: 1.65em;
+    margin-bottom: -25px;
+    margin-top: -10px;
+    text-decoration: none;
+}
+
+#name:hover {
+  color: aqua;
+  text-decoration: none;
+}
+
+#address {
+    font-size: 1.15em;
+    margin-bottom: -15px;
+    transition: 0.25s;
+    text-decoration: none;
+}
+
+#address:hover {
+    color: var(--main-color);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#pr {
+    font-size: 0.9em;
+}
+
+#pr:hover {
+  color: violet;
+}
+
+#name,
+#address,
+#pr {
+    color: var(--text-color);
+}
+  
+.btn,
+.btn a {
+    margin-top: -18px;
+    font-family: "Annie Use Your Telescope", cursive;
+    text-decoration: none;
+    animation: floatUp 2s infinite;
+    font-size: 1.15em;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    color: var(--text-color);
+    background: linear-gradient(to right, var(--bg-color) 50%, var(--text-color) 50%);
+    background-size: 200% 100%;
+    transition: background-position 0.35s ease-in-out, color 0.35s ease-in-out;
+    text-decoration: none;
+    padding: -2em;
+}
+ 
+.btn a:hover {
+    background-position: -100% 0;
+    color: var(--bg-color);
+}
+
+@keyframes floatUp {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+}
+
+.attribution {
+  text-align: center;
+  font-size: 1em;
+  color: var(--text-color);
+}
+
+.attribution a {
+  text-decoration: none;
+  color: var(--main-color);
+  transition: 0.4s ease-in-out;
+}
+
+.attribution a:hover {
+  font-size: 2em;
+}
